@@ -1,154 +1,229 @@
 <html lang="zh-CN">
 <head>
-  	<meta charset="utf-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<link href="css/ionic.min.css" rel="stylesheet">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="css/ionic.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <style>
-	
-		body,html{
-			margin:0;
-			padding:0;
-			width:100%;
-			height:100%;
-			font-family: "微软雅黑","Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
-		}
-		h1,span {font-family: "微软雅黑","Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;font-size:14px;}
-		.table{
-			margin-top:44px;
-		}
-		.tip{
-			white-space:nowrap;
-			text-align:center;
-		}
-		.front{
-			text-align:center;
-		}
-		.back{
-			text-align:right;
-		}
-	</style>
+
+        /*body,html{*/
+        /*margin:0;*/
+        /*padding:0;*/
+        /*width:100%;*/
+        /*/!*height:100%;*!/*/
+        /*font-family: "微软雅黑","Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;*/
+        /*}*/
+
+        body {
+            overflow: scroll;
+        }
+
+        .bar-header {
+            position: fixed;
+        }
+
+        .bar-footer {
+            position: fixed;
+        }
+
+        .content {
+            position: fixed;
+            width: 100%;
+            overflow: auto;
+        }
+        .tab-item.active {
+            color: #387ef5;
+        }
+
+
+        h1, span {
+            font-family: "微软雅黑", "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+            font-size: 14px;
+        }
+
+
+        .tip {
+            white-space: nowrap;
+            text-align: center;
+        }
+
+        .front {
+            text-align: center;
+        }
+
+        .back {
+            text-align: right;
+        }
+    </style>
     <script src="js/ionic.min.js"></script>
 
 </head>
 
 <body>
-	<div class="container">
-    	<div class="bar bar-header bar-positive">
-          <button class="button button-icon icon ion-navicon"></button>
-          <h1 class="title">生产计划</h1>
-          <button class="button button-clear"><i class="fa fa-pie-chart"></i></button>
-          
+<div class="bar bar-header bar-positive">
+    <button class="button button-icon icon ion-navicon"></button>
+    <h1 class="title">生产计划</h1>
+    <button class="button button-clear"><i class="fa fa-pie-chart"></i></button>
+
+</div>
+<div class="content  has-header has-footer">
+    <div class="table">
+        <div class="row">
+            <div class="col tip">线体</div>
+            <div class="col tip">日计划</div>
+            <div class="col tip">先计划</div>
+            <div class="col tip">现在完成</div>
+            <div class="col tip">可动率</div>
         </div>
-        <div class="table">
-        	<div class="row">
-              <div class="col tip">线体</div>
-              <div class="col tip">日计划</div>
-              <div class="col tip">先计划</div>
-              <div class="col tip">现在完成</div>
-              <div class="col tip">可动率</div>
-            </div>
-            <ul class="list">
-                <li class="item">
-                	<div class="row">
-                    	<div class="col-20">仪表</div>
-                        <div class="col-20 data front">500</div>
-                        <div class="col-20 data front">100</div>
-                        <div class="col-20 data back">98</div>
-                        <div class="col-20 data back">98</div>
-                    </div>
-                </li>
-                <li class="item">
-                	<div class="row">
-                    	<div class="col-20">车门线</div>
-                        <div class="col-20 data front">500</div>
-                        <div class="col-20 data front">100</div>
-                        <div class="col-20 data back">97</div>
-                        <div class="col-20 data back">98</div>
-                    </div>
-                </li>
-                <li class="item">
-                	<div class="row">
-                    	<div class="col-20">发动机</div>
-                        <div class="col-20 data front">500</div>
-                        <div class="col-20 data front">100</div>
-                        <div class="col-20 data back">98</div>
-                        <div class="col-20 data back">98</div>
-                    </div>
-                </li>
-                <li class="item">
-                	<div class="row">
-                    	<div class="col-20">组装一</div>
-                        <div class="col-20 data front">500</div>
-                        <div class="col-20 data front">100</div>
-                        <div class="col-20 data back">95</div>
-                        <div class="col-20 data back">95</div>
-                    </div>
-                </li>
-                <li class="item">
-                	<div class="row">
-                    	<div class="col-20">组装二</div>
-                        <div class="col-20 data front">500</div>
-                        <div class="col-20 data front">100</div>
-                        <div class="col-20 data back">99</div>
-                        <div class="col-20 data back">99</div>
-                    </div>
-                </li>
-                <li class="item">
-                	<div class="row">
-                    	<div class="col-20">底盘一</div>
-                        <div class="col-20 data front">500</div>
-                        <div class="col-20 data front">100</div>
-                        <div class="col-20 data back">96</div>
-                        <div class="col-20 data back">96</div>
-                    </div>
-                </li>
-                <li class="item">
-                	<div class="row">
-                    	<div class="col-20">底盘二</div>
-                        <div class="col-20 data front">500</div>
-                        <div class="col-20 data front">100</div>
-                        <div class="col-20 data back">98</div>
-                        <div class="col-20 data back">98</div>
-                    </div>
-                </li>
-                <li class="item">
-                	<div class="row">
-                    	<div class="col-20">内饰一</div>
-                        <div class="col-20 data front">500</div>
-                        <div class="col-20 data front">100</div>
-                        <div class="col-20 data back">96</div>
-                        <div class="col-20 data back">96</div>
-                    </div>
-                </li>
-                <li class="item">
-                	<div class="row">
-                    	<div class="col-20">内饰二</div>
-                        <div class="col-20 data front">500</div>
-                        <div class="col-20 data front">100</div>
-                        <div class="col-20 data back">98</div>
-                        <div class="col-20 data back">98</div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <div class="tabs tabs-icon-top">
-          <a class="tab-item">
-            <i class="icon ion-home"></i>
-            Home
-          </a>
-          <a class="tab-item">
-            <i class="icon ion-star"></i>
-            Favorites
-          </a>
-          <a class="tab-item">
-            <i class="icon ion-gear-a"></i>
-            Settings
-          </a>
-        </div>
+        <ul class="list">
+            <li class="item">
+                <div class="row">
+                    <div class="col-20">仪表</div>
+                    <div class="col-20 data front">500</div>
+                    <div class="col-20 data front">100</div>
+                    <div class="col-20 data back">98</div>
+                    <div class="col-20 data back">98</div>
+                </div>
+            </li>
+            <li class="item">
+                <div class="row">
+                    <div class="col-20">车门线</div>
+                    <div class="col-20 data front">500</div>
+                    <div class="col-20 data front">100</div>
+                    <div class="col-20 data back">97</div>
+                    <div class="col-20 data back">98</div>
+                </div>
+            </li>
+            <li class="item">
+                <div class="row">
+                    <div class="col-20">发动机</div>
+                    <div class="col-20 data front">500</div>
+                    <div class="col-20 data front">100</div>
+                    <div class="col-20 data back">98</div>
+                    <div class="col-20 data back">98</div>
+                </div>
+            </li>
+            <li class="item">
+                <div class="row">
+                    <div class="col-20">组装一</div>
+                    <div class="col-20 data front">500</div>
+                    <div class="col-20 data front">100</div>
+                    <div class="col-20 data back">95</div>
+                    <div class="col-20 data back">95</div>
+                </div>
+            </li>
+            <li class="item">
+                <div class="row">
+                    <div class="col-20">组装二</div>
+                    <div class="col-20 data front">500</div>
+                    <div class="col-20 data front">100</div>
+                    <div class="col-20 data back">99</div>
+                    <div class="col-20 data back">99</div>
+                </div>
+            </li>
+            <li class="item">
+                <div class="row">
+                    <div class="col-20">底盘一</div>
+                    <div class="col-20 data front">500</div>
+                    <div class="col-20 data front">100</div>
+                    <div class="col-20 data back">96</div>
+                    <div class="col-20 data back">96</div>
+                </div>
+            </li>
+            <li class="item">
+                <div class="row">
+                    <div class="col-20">底盘二</div>
+                    <div class="col-20 data front">500</div>
+                    <div class="col-20 data front">100</div>
+                    <div class="col-20 data back">98</div>
+                    <div class="col-20 data back">98</div>
+                </div>
+            </li>
+            <li class="item">
+                <div class="row">
+                    <div class="col-20">内饰一</div>
+                    <div class="col-20 data front">500</div>
+                    <div class="col-20 data front">100</div>
+                    <div class="col-20 data back">96</div>
+                    <div class="col-20 data back">96</div>
+                </div>
+            </li>
+            <li class="item">
+                <div class="row">
+                    <div class="col-20">内饰二</div>
+                    <div class="col-20 data front">500</div>
+                    <div class="col-20 data front">100</div>
+                    <div class="col-20 data back">98</div>
+                    <div class="col-20 data back">98</div>
+                </div>
+            </li>
+            <li class="item">
+                <div class="row">
+                    <div class="col-20">内饰二</div>
+                    <div class="col-20 data front">500</div>
+                    <div class="col-20 data front">100</div>
+                    <div class="col-20 data back">98</div>
+                    <div class="col-20 data back">98</div>
+                </div>
+            </li>
+            <li class="item">
+                <div class="row">
+                    <div class="col-20">内饰二</div>
+                    <div class="col-20 data front">500</div>
+                    <div class="col-20 data front">100</div>
+                    <div class="col-20 data back">98</div>
+                    <div class="col-20 data back">98</div>
+                </div>
+            </li>
+            <li class="item">
+                <div class="row">
+                    <div class="col-20">内饰二</div>
+                    <div class="col-20 data front">500</div>
+                    <div class="col-20 data front">100</div>
+                    <div class="col-20 data back">98</div>
+                    <div class="col-20 data back">98</div>
+                </div>
+            </li>
+            <li class="item">
+                <div class="row">
+                    <div class="col-20">内饰二</div>
+                    <div class="col-20 data front">500</div>
+                    <div class="col-20 data front">100</div>
+                    <div class="col-20 data back">98</div>
+                    <div class="col-20 data back">98</div>
+                </div>
+            </li>
+        </ul>
     </div>
+
+</div>
+<div class="bar bar-footer">
+    <div class="tabs tabs-nav tabs-icon-top">
+        <a class="tab-item" href="index.html">
+            <i class="icon fa fa-bell"></i>
+            呼叫告警
+            <!--ion-ios-pulse-strong-->
+        </a>
+        <a class="tab-item" href="record.html">
+            <i class="icon fa fa-history"></i>
+            呼叫历史
+            <!--ion-star-->
+        </a>
+        <a class="tab-item active" href="plan.html">
+            <i class="icon fa fa-table"></i>
+            生产计划
+            <!--ion-star-->
+        </a>
+        <a class="tab-item">
+            <i class="icon fa fa-cog"></i>
+            <!--ion-gear-a-->
+            我
+        </a>
+    </div>
+</div>
+
 </body>
 </html>
