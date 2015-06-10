@@ -8,22 +8,25 @@
     <link href="css/ionic.min.css" rel="stylesheet">
     <style>
         /*body, html {*/
-            /*margin: 0;*/
-            /*padding: 0;*/
-            /*width: 100%;*/
-            /*height: 100%;*/
-            /*font-family: "微软雅黑", "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;*/
+        /*margin: 0;*/
+        /*padding: 0;*/
+        /*width: 100%;*/
+        /*height: 100%;*/
+        /*font-family: "微软雅黑", "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;*/
         /*}*/
 
         body {
             overflow: scroll;
         }
+
         .bar-header {
             position: fixed;
         }
+
         .bar-footer {
             position: fixed;
         }
+
         .content {
             position: fixed;
             width: 100%;
@@ -46,7 +49,6 @@
         .dieline {
             color: #FC585C;
         }
-
 
         /*故障列表样式*/
         .ball {
@@ -89,16 +91,35 @@
         .finish-button {
             float: right;
             margin-top: -80px;
-
+            height: 80px;
+            background-color: #387ef5;
         }
 
         .button {
-            height: 80px;
+            height: 40px;
             width: 60px;
+            display: block;
         }
 
         /*故障列表样式*/
     </style>
+    <script>
+        function doConfirm(ele) {
+            if (confirm("您确认受理吗？")) {
+                ele.classList.remove("button-positive");
+                ele.classList.add("button-stable");
+            }
+
+        }
+
+        function doComplete(ele) {
+            if (confirm("是否已处理完结？")) {
+                ele.classList.remove("button-positive");
+                ele.classList.add("button-stable");
+            }
+
+        }
+    </script>
 
 
 </head>
@@ -121,7 +142,7 @@
             生产计划
             <!--ion-star-->
         </a>
-        <a class="tab-item">
+        <a class="tab-item" href="setting.html">
             <i class="icon fa fa-cog"></i>
             <!--ion-gear-a-->
             我
@@ -152,7 +173,13 @@
                     </div>
                 </div>
                 <div class="finish-button">
-                    <button class="button button-positive"><span>完工<br/>确认</span></button>
+                    <button class="button button-positive" onclick="doConfirm(this)">
+                        确认
+                    </button>
+
+                    <button class="button button-positive" onclick="doComplete(this)">
+                        完工
+                    </button>
                 </div>
             </div>
         </div>
@@ -173,7 +200,13 @@
                     </div>
                 </div>
                 <div class="finish-button">
-                    <button class="button button-positive"><span>完工<br/>确认</span></button>
+                    <button class="button button-positive" onclick="doConfirm(this)">
+                        确认
+                    </button>
+
+                    <button class="button button-positive" onclick="doComplete(this)">
+                        完工
+                    </button>
                 </div>
             </div>
         </div>
@@ -194,7 +227,13 @@
                     </div>
                 </div>
                 <div class="finish-button">
-                    <button class="button button-positive"><span>完工<br/>确认</span></button>
+                    <button class="button button-positive" onclick="doConfirm(this)">
+                        确认
+                    </button>
+
+                    <button class="button button-positive" onclick="doComplete(this)">
+                        完工
+                    </button>
                 </div>
             </div>
         </div>
@@ -215,7 +254,13 @@
                     </div>
                 </div>
                 <div class="finish-button">
-                    <button class="button button-positive"><span>完工<br/>确认</span></button>
+                    <button class="button button-positive" onclick="doConfirm(this)">
+                        确认
+                    </button>
+
+                    <button class="button button-positive" onclick="doComplete(this)">
+                        完工
+                    </button>
                 </div>
             </div>
         </div>
@@ -236,7 +281,13 @@
                     </div>
                 </div>
                 <div class="finish-button">
-                    <button class="button button-positive"><span>完工<br/>确认</span></button>
+                    <button class="button button-positive" onclick="doConfirm(this)">
+                        确认
+                    </button>
+
+                    <button class="button button-positive" onclick="doComplete(this)">
+                        完工
+                    </button>
                 </div>
             </div>
         </div>
@@ -257,7 +308,13 @@
                     </div>
                 </div>
                 <div class="finish-button">
-                    <button class="button button-positive"><span>完工<br/>确认</span></button>
+                    <button class="button button-positive" onclick="doConfirm(this)">
+                        确认
+                    </button>
+
+                    <button class="button button-positive" onclick="doComplete(this)">
+                        完工
+                    </button>
                 </div>
             </div>
         </div>
@@ -278,7 +335,13 @@
                     </div>
                 </div>
                 <div class="finish-button">
-                    <button class="button button-positive"><span>完工<br/>确认</span></button>
+                    <button class="button button-positive" onclick="doConfirm(this)">
+                        确认
+                    </button>
+
+                    <button class="button button-positive" onclick="doComplete(this)">
+                        完工
+                    </button>
                 </div>
             </div>
         </div>
